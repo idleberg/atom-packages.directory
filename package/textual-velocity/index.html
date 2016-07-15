@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Atom Packages Directory</title>
+    <link rel="stylesheet" href="/assets/application.css">
+    <link rel="stylesheet" href="/assets/admin.css">
+    <link rel="icon" href="/assets/favicon.png">
+
+  </head>
+  <body>
+    <header>
+      <h1><a href="/"><span class="octicon octicon-package"></span>Atom Packages Directory</a></h1>
+      <span class="subheader">a package directory for a <a href="http://atom.io">text editor of the 21st Century</a></span>
+    </header>
+    <section id="content">
+      <h1>
+  Textual Velocity
+  <a href="https://github.com/viddo/atom-textual-velocity">
+    <span class="octicon octicon-mark-github"></span>
+  </a>
+  
+</h1>
+<div class="package-install">
+  <strong>Install with:</strong>
+  <pre>
+    apm install textual-velocity
+  </pre>
+</div>
+<h1 id="textual-velocity-for-atom-build-statushttptravis-ciorgviddoatom-textual-velocitypngbranchmasterhttptravis-ciorgviddoatom-textual-velocity">Textual Velocity for Atom <a href="http://travis-ci.org/viddo/atom-textual-velocity"><img src="http://travis-ci.org/viddo/atom-textual-velocity.png?branch=master" alt="Build Status" /></a></h1>
+<p><em>Note that this package is still WIP, see <a href="https://github.com/viddo/atom-textual-velocity/milestones">v1 roadmap milestone</a> for details.  See the <a href="CHANGELOG.md">change log</a> for what’s new.</em></p>
+
+<p>Your mental notes at your fingertips!</p>
+
+<p>For those of you who used <a href="http://notational.net/">Notational Velocity</a> or <a href="http://brettterpstra.com/projects/nvAlt/">nvalt</a> before should feel right at home.</p>
+
+<p><img width="748" alt="screen shot 2016-02-04 at 20 05 58" src="https://cloud.githubusercontent.com/assets/978461/12831123/f48a5964-cb92-11e5-9752-859edd2ed3a9.png" /></p>
+
+<h2 id="usage">Usage</h2>
+<p>The package is lazy-loaded, use the <code>Textual Velocity: Start Session</code> <a href="https://atom.io/docs/v1.4.3/getting-started-atom-basics#command-palette">command</a> to get started.</p>
+
+<p>By default notes are saved in <code>~/.atom/notes</code>, you can change it through the <code>textual-velocity:path</code> <a href="https://atom.io/docs/api/v1.5.0/Config">config</a> setting.</p>
+
+<p>You may also want to set a global shortcut to toggle the Atom window, see my <a href="docs/init.coffee">init config</a> for an example of how this can be setup when the package is activated.</p>
+
+<p>The <code>core.ignoredNames</code> and <code>core.excludeVcsIgnoredPaths</code> are respected, but you need to restart a session for the changes to apply.</p>
+
+<p>See <a href="keymaps/textual-velocity.cson">keymaps</a> for available shortcuts.</p>
+
+<p>Also, I recommend the following packages, that works great in combination with textual-velocity:
+- <a href="https://atom.io/packages/quick-file-actions">quick-file-actions</a> - Quickly copy, delete, move, and create new files
+- <a href="https://atom.io/packages/file-icons">file-icons</a> - Assign file extension icons and colours for improved visual grepping
+- <a href="https://atom.io/packages/preview">preview</a> - Ultimate previewer of source code in Atom.
+- <a href="https://atom.io/packages/recent-files-fuzzy-finder">recent-files-fuzzy-finder</a> - Find recently opened files easier
+- <a href="https://atom.io/packages/block-travel">block-travel</a> - Quickly travel up/down between blocks of code</p>
+
+<h2 id="installation">Installation</h2>
+<p><code>apm install textual-velocity</code>, or search &amp; install it through the settings.</p>
+<section class="package-keywords">
+  <strong>Keywords:</strong> note, notetaking, notational velocity, nvalt, search, filter, wiki <a href="https://github.com/viddo/atom-textual-velocity/edit/master/package.json">Suggest keywords</a>
+</section>
+
+    </section>
+    <footer>
+      <p>
+        <span class="octicon octicon-code"></span> with <span class="octicon octicon-heart"></span> by <a href="http://bastilian.me">@bastilian</a><br />
+        <small>
+          1872 out of 5687 packages categorised.
+          | Last updated: 2016-07-15</small>
+      </p>
+      <p>
+
+      </p>
+    </footer>
+    <div style="opacity:.15;position:relative;z-index:-1;">
+      <div class="system"></div>
+      <div class="system-2"></div>
+    </div>
+    <a href="https://github.com/bastilian/atom-packages.directory">
+      <img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/38ef81f8aca64bb9a64448d0d70f1308ef5341ab/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6461726b626c75655f3132313632312e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png">
+    </a>
+  </body>
+</html>

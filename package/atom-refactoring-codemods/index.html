@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Atom Packages Directory</title>
+    <link rel="stylesheet" href="/assets/application.css">
+    <link rel="stylesheet" href="/assets/admin.css">
+    <link rel="icon" href="/assets/favicon.png">
+
+  </head>
+  <body>
+    <header>
+      <h1><a href="/"><span class="octicon octicon-package"></span>Atom Packages Directory</a></h1>
+      <span class="subheader">a package directory for a <a href="http://atom.io">text editor of the 21st Century</a></span>
+    </header>
+    <section id="content">
+      <h1>
+  Refactoring Codemods
+  <a href="https://github.com/jurassix/atom-refactoring-codemods">
+    <span class="octicon octicon-mark-github"></span>
+  </a>
+  
+    <span class="author">by clint ayres <clinton.ayres@gmail.com></span>
+  
+</h1>
+<div class="package-install">
+  <strong>Install with:</strong>
+  <pre>
+    apm install atom-refactoring-codemods
+  </pre>
+</div>
+<h1 id="atom-refactoring-codemods-package">atom-refactoring-codemods package</h1>
+
+<p><a href="https://travis-ci.org/jurassix/atom-refactoring-codemods"><img src="https://travis-ci.org/jurassix/atom-refactoring-codemods.svg?branch=master" alt="Build Status" /></a>
+<a href="https://david-dm.org/jurassix/atom-refactoring-codemods"><img src="https://david-dm.org/jurassix/atom-refactoring-codemods.svg" alt="Dependency Status" /></a></p>
+
+<h2 id="javascript-refactoring-support-for-atom">JavaScript refactoring support for Atom</h2>
+
+<p>This package allows you to rename a file and have all internal relative imports/requires paths be updated to new location (if moved to a new dir) and all dependent files in your projects imports/requires be updated with your new file path.</p>
+
+<p>This Atom package is a work in progress. The goal is to provide refactoring support to Atom, during file rename, file or directory move, and renaming of exported module.</p>
+
+<p>The UI is a work in progress, all critiques are welcome - please read the <em>Contribute</em> section below if you are interested in making this package better.</p>
+
+<h4 id="usage">Usage</h4>
+
+<p>Right click on any .js file to expose the <em>Rename (with refactor support)</em> option. Selecting this option will open a modalPanel that will allow the user to update the file path/name. Pressing <em>Enter Key</em> will apply the file rename/move and then run a codemod on the root folder.</p>
+
+<h4 id="how-it-all-works">How it all works</h4>
+
+<p><strong>atom-refactoring-codemods</strong> is a UI package that executes jscodeshift codemods in memory. I’ve written 2 <a href="https://github.com/jurassix/refactoring-codemods">refactoring-codemods</a> that do the heavy lifting of building the AST and updating the sources to match.</p>
+
+<p><strong>import-declaration-transform</strong> updates all dependent <em>import/require</em> <strong>paths</strong> when a file has been renamed/moved. This codemod takes the <em>previousPath</em> and <em>newPath</em> of the file and then all dependent <em>import/require</em> paths will be updated to match the new file name/location.</p>
+
+<p>Example:</p>
+
+<p><code>js
+import foo from './bar';
+</code></p>
+
+<p>becomes</p>
+
+<p><code>js
+import foo from './new/path/to/bar';
+</code></p>
+
+<p><strong>import-specifier-transform</strong> updates all dependent <em>import/require</em> <strong>variables</strong> when a file export been renamed. This codemod takes the <em>previousExportName</em> and <em>newExportName</em> for a given file and then all dependent <em>import/require</em> variables will be updated to match the new file export name.</p>
+
+<p>Example:</p>
+
+<p>```js
+import foo from ‘./bar’;</p>
+
+<p>foo();
+```</p>
+
+<p>becomes</p>
+
+<p>```js
+import fooPrime from ‘./bar’;</p>
+
+<p>fooPrime();
+ ```</p>
+
+<h4 id="progress">Progress</h4>
+<ul>
+  <li>[x] Single File Rename with refactors</li>
+  <li>[x] Directory Rename with refactors</li>
+  <li>[ ] Export Rename with refactors</li>
+  <li>[ ] Interactive Mode - show a panel with all refactors possible let user select/deselect files to update</li>
+</ul>
+
+<h3 id="install">Install</h3>
+<p><code>
+apm i atom-refactoring-codemods
+</code></p>
+
+<h3 id="develop">Develop</h3>
+<p><code>
+&gt; cd atom-refactoring-codemods
+&gt; npm i
+&gt; apm link
+</code></p>
+
+<h3 id="contribute">Contribute</h3>
+<ul>
+  <li>Please open an <a href="https://github.com/jurassix/atom-refactoring-codemods/issues">issue</a> before submitting a PR</li>
+  <li>All PR’s should be accompanied wth tests :rocket:</li>
+</ul>
+<section class="package-keywords">
+  <strong>Keywords:</strong> refactoring, refactor, codemod, jscodeshift, js-codemod, rename <a href="https://github.com/jurassix/atom-refactoring-codemods/edit/master/package.json">Suggest keywords</a>
+</section>
+
+    </section>
+    <footer>
+      <p>
+        <span class="octicon octicon-code"></span> with <span class="octicon octicon-heart"></span> by <a href="http://bastilian.me">@bastilian</a><br />
+        <small>
+          1872 out of 5687 packages categorised.
+          | Last updated: 2016-07-15</small>
+      </p>
+      <p>
+
+      </p>
+    </footer>
+    <div style="opacity:.15;position:relative;z-index:-1;">
+      <div class="system"></div>
+      <div class="system-2"></div>
+    </div>
+    <a href="https://github.com/bastilian/atom-packages.directory">
+      <img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/38ef81f8aca64bb9a64448d0d70f1308ef5341ab/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6461726b626c75655f3132313632312e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png">
+    </a>
+  </body>
+</html>

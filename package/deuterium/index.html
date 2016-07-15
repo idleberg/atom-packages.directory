@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Atom Packages Directory</title>
+    <link rel="stylesheet" href="/assets/application.css">
+    <link rel="stylesheet" href="/assets/admin.css">
+    <link rel="icon" href="/assets/favicon.png">
+
+  </head>
+  <body>
+    <header>
+      <h1><a href="/"><span class="octicon octicon-package"></span>Atom Packages Directory</a></h1>
+      <span class="subheader">a package directory for a <a href="http://atom.io">text editor of the 21st Century</a></span>
+    </header>
+    <section id="content">
+      <h1>
+  Deuterium
+  <a href="https://github.com/nikitakit/deuterium">
+    <span class="octicon octicon-mark-github"></span>
+  </a>
+  
+    <span class="author">by Nikita Kitaev <nikitakit@gmail.com></span>
+  
+</h1>
+<div class="package-install">
+  <strong>Install with:</strong>
+  <pre>
+    apm install deuterium
+  </pre>
+</div>
+<h1 id="deuterium">deuterium</h1>
+
+<p>A Python3-only fork of <a href="http://github.com/nteract/hydrogen">Hydrogen</a> designed to be used together with <a href="http://github.com/nikitakit/xdbg">xdbg</a>.</p>
+
+<p>This package builds on stock Hydrogen to provide even more powerful introspection capabilites, specific to Python (only Python 3.5+ is currently supported). It integrates with the <a href="http://github.com/nikitakit/xdbg">xdbg</a> extensions for IPython to allow live-coding at any scope within your program, including inside modules and functions.</p>
+
+<p><strong>WARNING</strong>: this package is <em>incompatible</em> with Hydrogen proper, because it does not define its own namespaces!</p>
+
+<p>&lt;img src=”https://cloud.githubusercontent.com/assets/13285808/14598778/1cff1b32-0554-11e6-8181-504307ca6b56.gif” width=600&gt;</p>
+
+<h2 id="features">Features</h2>
+
+<ul>
+  <li>execute a line, selection, or block at a time</li>
+  <li>execute code in multiple modules’ namespaces, by simply switching to a module’s source file in Atom</li>
+  <li>set breakpoints inside functions and execute code interactively inside the function’s scope</li>
+  <li>autocomplete based on inspecting live objects</li>
+  <li>rich media support for plots, images, and video</li>
+  <li>code can be inspected to show useful information provided by the running kernel</li>
+</ul>
+
+<h2 id="why-a-fork">Why a fork?</h2>
+
+<p>Given that this package is still very early in development, forking the Hydrogen code is the easiest way to experiment with new features. The changes here are not a good candidate for merging into mainline Hydrogen because they includes Python3-specific features that may interfere with correct functionality of other Jupyter kernels.</p>
+
+<p>Once the interaction design for this package is more mature, it will be ported to a Hydrogen extension instead.</p>
+
+<h2 id="dependencies">Dependencies</h2>
+
+<p>For all systems, you’ll need</p>
+
+<ul>
+  <li><a href="https://atom.io/">Atom</a> <code>1.6.0+</code></li>
+  <li><a href="http://zeromq.org/intro:get-the-software">ZeroMQ</a></li>
+  <li>IPython notebook <code>pip install ipython[notebook]</code></li>
+  <li>Python 2 (for builds) and Python 3 (for actually running code)</li>
+  <li><a href="http://github.com/nikitakit/xdbg">xdbg</a></li>
+</ul>
+
+<p>Each operating system has their own instruction set. Please read on down to save yourself time.</p>
+
+<h4 id="os-x">OS X</h4>
+
+<h5 id="homebrew-on-os-x">homebrew on OS X</h5>
+
+<ul>
+  <li><a href="https://www.freedesktop.org/wiki/Software/pkg-config/"><code>pkg-config</code></a>: <code>brew install pkg-config</code></li>
+  <li><a href="http://zeromq.org/intro:get-the-software">ZeroMQ</a>: <code>brew install zeromq</code></li>
+  <li><a href="http://ipython.org/install.html">IPython (Jupyter)</a>: needs to be installed and on your <code>$PATH</code>. <code>pip install "ipython[notebook]"</code></li>
+</ul>
+
+<h4 id="windows">Windows</h4>
+
+<ul>
+  <li>You’ll need a compiler! <a href="https://www.visualstudio.com/en-us/downloads/download-visual-studio-vs.aspx">Visual Studio 2013 Community Edition</a> is required to build zmq.node.</li>
+  <li>Python (tread on your own or install <a href="https://www.continuum.io/downloads">Anaconda</a>)</li>
+  <li><a href="http://ipython.org/install.html">IPython notebook</a> - If you installed Anaconda, you’re already done</li>
+</ul>
+
+<p>After these are installed, you’ll likely need to restart your machine (especially after Visual Studio).</p>
+
+<h4 id="linux">Linux</h4>
+
+<p>For Debian/Ubuntu based variants, you’ll need <code>libzmq3-dev</code> (preferred) or alternatively <code>libzmq-dev</code>. <br />
+For RedHat/CentOS/Fedora/openSUSE based variants, you’ll need <code>zeromq</code> and <code>zeromq-devel</code>.
+For Arch Linux based variants, you’ll need <code>zeromq</code> or <code>zeromq3</code> (which has to be built from the <abbr title="Arch User Repository">AUR</abbr>).
+For Gentoo Linux based variants, you’ll need <code>net-libs/zeromq</code>.</p>
+
+<p>If you have Python and pip setup, install the notebook directly, via running (as root):</p>
+
+<p><code>
+pip install ipython[notebook]
+</code></p>
+
+<h2 id="installation">Installation</h2>
+
+<p>Assuming you followed the dependencies steps above, you can now <code>apm install deuterium</code> (recommended) or search for “hydrogen” in the Install pane of the Atom settings. Note that installing from within Atom will only work if you start Atom from the command line! See <a href="#Jank">Jank</a>.</p>
+
+<p>If your default <code>python</code> is 3.x, you need to run instead <code>PYTHON=python2.7 apm install deuterium</code> or change the default version for <code>apm</code> with <code>apm config set python $(which python2.7)</code> beforehand. You can still use 3.x versions of Python in Hydrogen, but it will only build with 2.x due to a <a href="https://bugs.chromium.org/p/gyp/issues/detail?id=36">longstanding issue with <code>gyp</code></a>.</p>
+
+<h2 id="usage">Usage</h2>
+
+<p>Please consult the <a href="http://github.com/nteract/hydrogen#readme">original Hydrogen documentation</a> and the <a href="http://github.com/nikitakit/xdbg#readme">xdbg readme</a></p>
+<section class="package-keywords">
+  <strong>Keywords:</strong> execute, run, jupyter, ipython, python, xdbg, live <a href="https://github.com/nikitakit/deuterium/edit/master/package.json">Suggest keywords</a>
+</section>
+
+    </section>
+    <footer>
+      <p>
+        <span class="octicon octicon-code"></span> with <span class="octicon octicon-heart"></span> by <a href="http://bastilian.me">@bastilian</a><br />
+        <small>
+          1872 out of 5687 packages categorised.
+          | Last updated: 2016-07-15</small>
+      </p>
+      <p>
+
+      </p>
+    </footer>
+    <div style="opacity:.15;position:relative;z-index:-1;">
+      <div class="system"></div>
+      <div class="system-2"></div>
+    </div>
+    <a href="https://github.com/bastilian/atom-packages.directory">
+      <img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/38ef81f8aca64bb9a64448d0d70f1308ef5341ab/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6461726b626c75655f3132313632312e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png">
+    </a>
+  </body>
+</html>

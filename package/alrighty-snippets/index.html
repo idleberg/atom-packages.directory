@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Atom Packages Directory</title>
+    <link rel="stylesheet" href="/assets/application.css">
+    <link rel="stylesheet" href="/assets/admin.css">
+    <link rel="icon" href="/assets/favicon.png">
+
+  </head>
+  <body>
+    <header>
+      <h1><a href="/"><span class="octicon octicon-package"></span>Atom Packages Directory</a></h1>
+      <span class="subheader">a package directory for a <a href="http://atom.io">text editor of the 21st Century</a></span>
+    </header>
+    <section id="content">
+      <h1>
+  Alrighty Snippets
+  <a href="https://github.com/alrighty/alrighty-snippets">
+    <span class="octicon octicon-mark-github"></span>
+  </a>
+  
+</h1>
+<div class="package-install">
+  <strong>Install with:</strong>
+  <pre>
+    apm install alrighty-snippets
+  </pre>
+</div>
+<h1 id="alrighty-snippets-package">alrighty-snippets package</h1>
+
+<p>React ES6 snippets for <a href="https://atom.io">Atom</a>.</p>
+
+<hr />
+
+<h1 id="snippets">Snippets</h1>
+
+<h3 id="new-component">New component</h3>
+
+<h5 id="prefix-rnc">Prefix: _rnc</h5>
+
+<p>```js
+import React, { Component, PropTypes } from ‘react’;</p>
+
+<p>export default class ${1:MyComponent} extends Component {
+	static propTypes = {</p>
+
+<pre><code>};
+
+render() {
+	return (
+		${2:&lt;div&gt;MyComponent&lt;/div&gt;}
+	);
+} } ``` ---
+</code></pre>
+
+<h3 id="lifecycle-methods">Lifecycle Methods</h3>
+<p>##### Prefix: _rcwm</p>
+
+<p><code>js
+componentWillMount() {
+	${1}
+}
+</code></p>
+
+<h5 id="prefix-rcdm">Prefix: _rcdm</h5>
+
+<p><code>js
+componentWillReceiveProps() {
+	${1}
+}
+</code></p>
+
+<h5 id="prefix-rcwu">Prefix: _rcwu</h5>
+
+<p><code>js
+componentWillUnmount() {
+	${1}
+}
+</code>
+—</p>
+
+<h3 id="proptypes">PropTypes</h3>
+
+<h4 id="string">String</h4>
+
+<h5 id="prefix-rps">Prefix: _rps</h5>
+
+<p><code>js
+${1:myProp}: PropTypes.string,
+</code></p>
+
+<h5 id="prefix-rpsr">Prefix: _rpsr</h5>
+
+<p><code>js
+${1:myProp}: PropTypes.string.isRequired,
+</code></p>
+
+<h4 id="number">Number</h4>
+
+<h5 id="prefix-rpn">Prefix: _rpn</h5>
+
+<p><code>js
+${1:myProp}: PropTypes.number,
+</code></p>
+
+<h5 id="prefix-rpnr">Prefix: _rpnr</h5>
+
+<p><code>js
+${1:myProp}: PropTypes.number.isRequired,
+</code></p>
+
+<h4 id="object">Object</h4>
+
+<h5 id="prefix-rpo">Prefix: _rpo</h5>
+
+<p><code>js
+${1:myProp}: PropTypes.object,
+</code></p>
+
+<h5 id="prefix-rpor">Prefix: _rpor</h5>
+
+<p><code>js
+${1:myProp}: PropTypes.object.isRequired,
+</code></p>
+
+<h4 id="array">Array</h4>
+
+<h5 id="prefix-rpa">Prefix: _rpa</h5>
+
+<p><code>js
+${1:myProp}: PropTypes.array,
+</code></p>
+
+<h5 id="prefix-rpar">Prefix: _rpar</h5>
+
+<p><code>js
+${1:myProp}: PropTypes.array.isRequired,
+</code></p>
+
+<h4 id="bool">Bool</h4>
+
+<h5 id="prefix-rpb">Prefix: _rpb</h5>
+
+<p><code>js
+${1:myProp}: PropTypes.bool,
+</code></p>
+
+<h5 id="prefix-rpbr">Prefix: _rpbr</h5>
+
+<p><code>js
+${1:myProp}: PropTypes.bool.isRequired,
+</code></p>
+
+<h4 id="element">Element</h4>
+
+<h5 id="prefix-rpe">Prefix: _rpe</h5>
+
+<p><code>js
+${1:myProp}: PropTypes.element,
+</code></p>
+
+<h5 id="prefix-rper">Prefix: _rper</h5>
+
+<p><code>js
+${1:myProp}: PropTypes.element.isRequired,
+</code></p>
+
+<h4 id="function">Function</h4>
+
+<h5 id="prefix-rpf">Prefix: _rpf</h5>
+<p><code>js
+${1:myProp}: PropTypes.func,
+</code></p>
+
+<h5 id="prefix-rpfr">Prefix: _rpfr</h5>
+<p><code>js
+${1:myProp}: PropTypes.func.isRequired,
+</code></p>
+<section class="package-keywords">
+  <strong>Keywords:</strong> react, es6, babel, snippets <a href="https://github.com/alrighty/alrighty-snippets/edit/master/package.json">Suggest keywords</a>
+</section>
+
+    </section>
+    <footer>
+      <p>
+        <span class="octicon octicon-code"></span> with <span class="octicon octicon-heart"></span> by <a href="http://bastilian.me">@bastilian</a><br />
+        <small>
+          1872 out of 5687 packages categorised.
+          | Last updated: 2016-07-15</small>
+      </p>
+      <p>
+
+      </p>
+    </footer>
+    <div style="opacity:.15;position:relative;z-index:-1;">
+      <div class="system"></div>
+      <div class="system-2"></div>
+    </div>
+    <a href="https://github.com/bastilian/atom-packages.directory">
+      <img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/38ef81f8aca64bb9a64448d0d70f1308ef5341ab/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6461726b626c75655f3132313632312e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png">
+    </a>
+  </body>
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Atom Packages Directory</title>
+    <link rel="stylesheet" href="/assets/application.css">
+    <link rel="stylesheet" href="/assets/admin.css">
+    <link rel="icon" href="/assets/favicon.png">
+
+  </head>
+  <body>
+    <header>
+      <h1><a href="/"><span class="octicon octicon-package"></span>Atom Packages Directory</a></h1>
+      <span class="subheader">a package directory for a <a href="http://atom.io">text editor of the 21st Century</a></span>
+    </header>
+    <section id="content">
+      <h1>
+  Import Sort
+  <a href="https://github.com/renke/atom-import-sort">
+    <span class="octicon octicon-mark-github"></span>
+  </a>
+  
+</h1>
+<div class="package-install">
+  <strong>Install with:</strong>
+  <pre>
+    apm install atom-import-sort
+  </pre>
+</div>
+<h1 id="atom-import-sort">atom-import-sort</h1>
+
+<p>Sort ES6 imports. Manually – or automatically when you save your Javascript files.</p>
+
+<p><img src="https://github.com/renke/atom-import-sort/blob/master/media/atom-import-sort.gif?raw=true" alt="Screencast" /></p>
+
+<p>This package does <strong>not</strong> sort <code>require</code> calls. Only ES6-style imports are supported as of now. Support for <code>require</code> may be added later, but it’s generally harder to do this compared to imports.</p>
+
+<h1 id="installation">Installation</h1>
+
+<p><code>apm install atom-import-sort</code></p>
+
+<h1 id="usage">Usage</h1>
+
+<p>Use  <kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>o</kbd> or the <code>Import Sort: Sort</code> command to sort imports on demand. Make sure you are actually editing a file that uses the <code>js</code> grammar (I highly recommend <a href="https://atom.io/packages/language-babel">language-babel</a>).</p>
+
+<p>Imports can also be sorted automatically on save when <code>Save on sort</code> is enabled in the package’s settings. This is disabled by default because it’s annoying at times.</p>
+
+<h1 id="sorting">Sorting</h1>
+
+<p>The resulting order of imports is currently hardcoded into the package (although it’s actually configurable in <a href="https://github.com/renke/import-sort">import-sort</a>) and looks like:</p>
+
+<p>```javascript
+import “aaa”;
+import “bbb”;</p>
+
+<p>import “./aaa”;
+import “./bbb”;</p>
+
+<p>import _ from “xyz”;
+import a from “a”
+import A from “A”;
+import B, {b} from “B”;
+import {C} from “C”</p>
+
+<p>import __ from “./xyz”
+import aa from “./a”
+import AA from “./A”;
+import BB, {bb} from “./B”;
+import {CC} from “./C”
+```</p>
+
+<p>Eventually I want to support different layouts that can be chosen in the setting’s page or on a per-project basis. Suggestions for other layouts are always welcome.</p>
+
+<h2 id="license">License</h2>
+
+<p>See <a href="LICENSE">LICENSE</a>.</p>
+<section class="package-keywords">
+  <strong>Keywords:</strong> es6, import, sort <a href="https://github.com/renke/atom-import-sort/edit/master/package.json">Suggest keywords</a>
+</section>
+
+    </section>
+    <footer>
+      <p>
+        <span class="octicon octicon-code"></span> with <span class="octicon octicon-heart"></span> by <a href="http://bastilian.me">@bastilian</a><br />
+        <small>
+          1872 out of 5687 packages categorised.
+          | Last updated: 2016-07-15</small>
+      </p>
+      <p>
+
+      </p>
+    </footer>
+    <div style="opacity:.15;position:relative;z-index:-1;">
+      <div class="system"></div>
+      <div class="system-2"></div>
+    </div>
+    <a href="https://github.com/bastilian/atom-packages.directory">
+      <img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/38ef81f8aca64bb9a64448d0d70f1308ef5341ab/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6461726b626c75655f3132313632312e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png">
+    </a>
+  </body>
+</html>

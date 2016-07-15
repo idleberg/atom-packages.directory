@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Atom Packages Directory</title>
+    <link rel="stylesheet" href="/assets/application.css">
+    <link rel="stylesheet" href="/assets/admin.css">
+    <link rel="icon" href="/assets/favicon.png">
+
+  </head>
+  <body>
+    <header>
+      <h1><a href="/"><span class="octicon octicon-package"></span>Atom Packages Directory</a></h1>
+      <span class="subheader">a package directory for a <a href="http://atom.io">text editor of the 21st Century</a></span>
+    </header>
+    <section id="content">
+      <h1>
+  Dependents
+  <a href="https://github.com/dependents/atom-dependents">
+    <span class="octicon octicon-mark-github"></span>
+  </a>
+  
+</h1>
+<div class="package-install">
+  <strong>Install with:</strong>
+  <pre>
+    apm install dependents
+  </pre>
+</div>
+<h1 id="dependents">Dependents</h1>
+
+<blockquote>
+  <p>Navigate front-end codebases</p>
+</blockquote>
+
+<ul>
+  <li>Supports JavaScript (AMD, CommonJS, ES6)</li>
+  <li>Supports CSS (Sass, Stylus)</li>
+</ul>
+
+<h3 id="requirements">Requirements</h3>
+
+<ul>
+  <li>You need Node.js v0.10 or above</li>
+  <li>If you’d like to use the <code>View Tree -&gt; As Image</code> feature, you need Graphviz installed.</li>
+</ul>
+
+<h5 id="installing-graphviz">Installing Graphviz</h5>
+
+<h6 id="mac-os-x">Mac OS X</h6>
+
+<pre><code>$ sudo port install graphviz
+</code></pre>
+
+<p>OR</p>
+
+<pre><code>$ brew install graphviz
+</code></pre>
+
+<h6 id="ubuntu">Ubuntu</h6>
+
+<pre><code>$ sudo apt-get install graphviz
+</code></pre>
+
+<h3 id="configuring-settings">Configuring settings</h3>
+
+<p>These can be specified by creating a <code>.deprc</code> file with the following
+settings in the root directory of your codebase:</p>
+
+<p><code>
+{
+  "root": "public/assets/js",
+  "config": "public/assets/js/config.js",  # Optional
+  "webpack_config": "public/assets/js/webpack.config.js",  # Optional
+  "styles_root": "public/assets/sass",       # Optional
+  "exclude": ['jquery.js', 'require.js'],  # Optional
+  "build_config": "public/assets/js/build.json", # Optional
+  "node_path": "/my/node/install/folder"   # Optional
+}
+</code></p>
+
+<ul>
+  <li>You must supply a value for either <code>root</code> or <code>styles_root</code></li>
+</ul>
+
+<p>Settings explanation:</p>
+
+<ul>
+  <li><code>"root"</code>: the location where your JS files reside</li>
+  <li><code>"config"</code>: the location of your RequireJS configuration for AMD codebases</li>
+  <li><code>"webpack_config"</code>: the location of your Webpack configuration</li>
+  <li><code>"styles_root"</code>: the location of your stylesheets (Sass, Stylus)</li>
+  <li><code>"exclude"</code>: a list of files and folder names to exclude in the search for dependents</li>
+  <li><code>"build_config"</code>: the location of your requirejs build configuration file</li>
+  <li><code>"node_path"</code>: the location of your node executable</li>
+</ul>
+
+<p>Please modify the values according to your codebase.</p>
+
+<h3 id="menu-options">Menu Options</h3>
+
+<p>You can find other features of this plugin from:</p>
+
+<p>Packages -&gt; Dependents</p>
+
+<p>Or by right clicking on a file and going to the Dependents menu</p>
+
+<h3 id="keyboard-shortcuts">Keyboard Shortcuts</h3>
+
+<ul>
+  <li>Jump to Dependency: <code>Alt + Click</code> (or <code>CMD + Alt + Right Arrow</code>) on the import name.</li>
+  <li>Find Dependents: <code>CMD + Alt + Up Arrow</code></li>
+</ul>
+
+<p>Use <code>Ctrl</code> instead of <code>CMD</code> for Windows/Linux.</p>
+<section class="package-keywords">
+  <strong>Keywords:</strong> javascript, amd, es6, commonjs, sass, stylus, css, navigation, productivity, dependency tree, dependents, dependencies, ide, traversal, codebase <a href="https://github.com/dependents/atom-dependents/edit/master/package.json">Suggest keywords</a>
+</section>
+
+    </section>
+    <footer>
+      <p>
+        <span class="octicon octicon-code"></span> with <span class="octicon octicon-heart"></span> by <a href="http://bastilian.me">@bastilian</a><br />
+        <small>
+          1872 out of 5687 packages categorised.
+          | Last updated: 2016-07-15</small>
+      </p>
+      <p>
+
+      </p>
+    </footer>
+    <div style="opacity:.15;position:relative;z-index:-1;">
+      <div class="system"></div>
+      <div class="system-2"></div>
+    </div>
+    <a href="https://github.com/bastilian/atom-packages.directory">
+      <img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/38ef81f8aca64bb9a64448d0d70f1308ef5341ab/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6461726b626c75655f3132313632312e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png">
+    </a>
+  </body>
+</html>
